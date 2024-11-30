@@ -46,7 +46,7 @@ with DAG(
         data={"api_key":"{{conn.nasa_api.extra_dejson.api_key}}"},
         response_filter=lambda response:response.json() ## Convert response to JSON
         )        
-        # api key: https://api.nasa.gov/planetary/apod?api_key=5CZ2RzvhccIfStjeVcPOOJsuIHFLHYgRP6qWSL3O
+        # api key: https://api.nasa.gov/planetary/apod?api_key=
     ## Step 3: Transform the data(Pick the info that need to be saved)
     @task
     def transform_apod_data(response):
